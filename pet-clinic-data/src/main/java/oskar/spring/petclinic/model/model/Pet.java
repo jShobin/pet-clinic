@@ -1,4 +1,4 @@
-package oskar.spring.petclinic.model;
+package oskar.spring.petclinic.model.model;
 
 import java.time.LocalDate;
 
