@@ -4,9 +4,6 @@ import oskar.spring.petclinic.model.Vet;
 
 import java.util.Set;
 
-public interface VetService {
-     Vet findById(Long id);
-     Vet save(Vet vet);
+public interface VetService extends CrudService<Vet, Long>{
 
-     Set<Vet> findall();
 }
