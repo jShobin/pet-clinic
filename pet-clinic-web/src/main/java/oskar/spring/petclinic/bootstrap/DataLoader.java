@@ -40,7 +40,7 @@ private final VetService vetService;
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet2.setId(1L);
+        vet2.setId(2L);
         vet2.setFirstName("Mariusz");
         vet2.setLastName("Lepczak");
         vetService.save(vet2);

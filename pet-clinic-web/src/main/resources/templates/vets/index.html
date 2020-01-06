@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>List of Vets</title>
 </head>
 <body>
+<!--/@thymesVar id="vet" type="oskar.spring.petclinic.model.Vet"*/--->
     <h1 th:text="'List of Vets'">List of Vets</h1>
+    <tabel>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr th:each="vet : ${vets}">
+            <td th:text="${vet?.id}">1</td>
+            <td th:text="${vet?.firstName}">Joe</td>
+            <td th:text="${vet?.lastName}">Knock</td>
+        </tr>
+    </tabel>
 </body>
 </html>
