@@ -1,11 +1,11 @@
 package oskar.spring.petclinic.services.map;
 
 import oskar.spring.petclinic.model.Owner;
-import oskar.spring.petclinic.services.CrudService;
+import oskar.spring.petclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -25,6 +25,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public void delete(Owner object) {
     super.delete(object);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 
     @Override
