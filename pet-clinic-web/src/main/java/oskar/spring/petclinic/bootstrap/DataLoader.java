@@ -20,13 +20,11 @@ private final VetService vetService;
     @Override
     public void run(String... args) throws Exception {
     Owner owner1 = new Owner();
-    owner1.setId(1L);
     owner1.setFirstName("Oskar");
     owner1.setLastName("Fabian");
     ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner2.setId(2L);
         owner2.setFirstName("Krzysztof");
         owner2.setLastName("Kangurek");
         ownerService.save(owner2);
@@ -34,13 +32,11 @@ private final VetService vetService;
         System.out.println("Load owners...");
 
         Vet vet1 = new Vet();
-        vet1.setId(1L);
         vet1.setFirstName("Magda");
         vet1.setLastName("Propka");
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet2.setId(2L);
         vet2.setFirstName("Mariusz");
         vet2.setLastName("Lepczak");
         vetService.save(vet2);
