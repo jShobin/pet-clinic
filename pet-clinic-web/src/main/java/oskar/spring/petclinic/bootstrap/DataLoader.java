@@ -6,8 +6,8 @@ import oskar.spring.petclinic.model.Owner;
 import oskar.spring.petclinic.model.PetType;
 import oskar.spring.petclinic.model.Vet;
 import oskar.spring.petclinic.services.OwnerService;
+import oskar.spring.petclinic.services.PetTypeService;
 import oskar.spring.petclinic.services.VetService;
-import oskar.spring.petclinic.services.map.PetTypeService;
 
 @Component
 public class DataLoader implements CommandLineRunner {

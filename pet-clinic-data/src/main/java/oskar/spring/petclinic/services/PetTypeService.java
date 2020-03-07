@@ -1,7 +1,6 @@
-package oskar.spring.petclinic.services.map;
+package oskar.spring.petclinic.services;
 
 import oskar.spring.petclinic.model.PetType;
-import oskar.spring.petclinic.services.CrudService;
 
 public interface PetTypeService extends CrudService<PetType, Long> {
 }

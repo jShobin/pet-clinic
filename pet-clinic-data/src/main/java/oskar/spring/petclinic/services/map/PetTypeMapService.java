@@ -2,6 +2,7 @@ package oskar.spring.petclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import oskar.spring.petclinic.model.PetType;
+import oskar.spring.petclinic.services.PetTypeService;
 
 import java.util.Set;
 @Service
