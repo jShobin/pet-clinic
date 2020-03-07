@@ -3,22 +3,32 @@ package oskar.spring.petclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import oskar.spring.petclinic.model.Owner;
+import oskar.spring.petclinic.model.PetType;
 import oskar.spring.petclinic.model.Vet;
 import oskar.spring.petclinic.services.OwnerService;
 import oskar.spring.petclinic.services.VetService;
+import oskar.spring.petclinic.services.map.PetTypeService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
 private final OwnerService ownerService;
 private final VetService vetService;
+private final PetTypeService petTypeService;
     //@Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogPetType = petTypeService.save(dog);
+        PetType cat = new PetType();
+        dog.setName("Cat");
+        PetType savedCatPetType = petTypeService.save(cat);
     Owner owner1 = new Owner();
     owner1.setFirstName("Oskar");
     owner1.setLastName("Fabian");
