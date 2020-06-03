@@ -2,11 +2,11 @@ package oskar.spring.petclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import oskar.spring.petclinic.model.Speciality;
-import oskar.spring.petclinic.services.SpecialtiesService;
+import oskar.spring.petclinic.services.SpecialtyService;
 
 import java.util.Set;
 @Service
-public class SpecialityService extends AbstractMapService<Speciality, Long> implements SpecialtiesService {
+public class SpecialitiesMapService extends  AbstractMapService<Speciality, Long>  implements SpecialtyService {
     @Override
     public Set<Speciality> findAll() {
         return super.findAll();
@@ -24,12 +24,11 @@ public class SpecialityService extends AbstractMapService<Speciality, Long> impl
 
     @Override
     public void delete(Speciality object) {
-        super.delete(object);
-
+    super.delete(object);
     }
 
     @Override
     public void deleteById(Long id) {
-        super.deleteById(id);
+    super.deleteById(id);
     }
 }
